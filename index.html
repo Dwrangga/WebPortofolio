@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Dewa Kadek Rangga</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sportif-yellow': '#FFC107', 
+                        'sportif-dark': '#111111',  
+                        'sportif-gray': '#222222',  
+                    },
+                    fontFamily: {
+                        'sans': ['Montserrat', 'sans-serif'],
+                        'display': ['Oswald', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+
+        .brush-bg {
+            background: linear-gradient(45deg, #FFC107 25%, transparent 25%),
+                        linear-gradient(-45deg, #FFC107 25%, transparent 25%);
+            background-size: 20px 20px;
+            opacity: 0.1;
+        }
+        
+        /* Animasi hover untuk card */
+        .hover-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 193, 7, 0.2);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #FFC107;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body class="bg-sportif-dark text-white font-sans overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 bg-sportif-dark/95 backdrop-blur-sm border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-display font-bold tracking-wider text-sportif-yellow">
+                RANGGA<span class="text-white">.DEV</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-widest">
+                <a href="#home" class="hover:text-sportif-yellow transition">Home</a>
+                <a href="#about" class="hover:text-sportif-yellow transition">Tentang</a>
+                <a href="#pendidikan" class="hover:text-sportif-yellow transition">Pendidikan</a>
+                <a href="#organisasi" class="hover:text-sportif-yellow transition">Organisasi</a>
+                <a href="#project" class="hover:text-sportif-yellow transition">Project</a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-sportif-gray border-t border-gray-700">
+            <a href="#home" class="block px-6 py-3 hover:bg-sportif-yellow hover:text-black transition">Home</a>
+            <a href="#about" class="block px-6 py-3 hover:bg-sportif-yellow hover:text-black transition">Tentang</a>
+            <a href="#pendidikan" class="block px-6 py-3 hover:bg-sportif-yellow hover:text-black transition">Pendidikan</a>
+            <a href="#organisasi" class="block px-6 py-3 hover:bg-sportif-yellow hover:text-black transition">Organisasi</a>
+            <a href="#project" class="block px-6 py-3 hover:bg-sportif-yellow hover:text-black transition">Project</a>
+        </div>
+    </nav>
+
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+
+        <div class="absolute inset-0 bg-sportif-dark z-0"></div>
+
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-sportif-yellow transform -skew-x-12 translate-x-32 opacity-20 z-0"></div>
+        
+        <div class="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-10 items-center">
+            <div class="space-y-6">
+                <span class="text-sportif-yellow font-bold tracking-widest uppercase text-sm border-l-4 border-sportif-yellow pl-3">Portofolio Mahasiswa</span>
+                <h1 class="text-5xl md:text-7xl font-display font-bold uppercase leading-tight">
+                    Dewa Kadek <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-sportif-yellow to-yellow-600">Rangga Harta Wijaya</span>
+                </h1>
+                <p class="text-gray-400 text-lg max-w-lg">
+                    Mahasiswa Teknik Informatika yang berdedikasi, disiplin, dan berpengalaman dalam organisasi. Siap berkontribusi dan berkembang di dunia teknologi.
+                </p>
+                <div class="flex gap-4 pt-4">
+                    <a href="#project" class="bg-sportif-yellow text-black font-bold uppercase px-8 py-3 rounded hover:bg-yellow-500 transition transform hover:scale-105">
+                        Lihat Project
+                    </a>
+                    <a href="#about" class="border border-white text-white font-bold uppercase px-8 py-3 rounded hover:bg-white hover:text-black transition">
+                        Tentang Saya
+                    </a>
+                </div>
+            </div>
+            
+            <div class="relative flex justify-center md:justify-end">
+                <div class="w-80 h-80 md:w-96 md:h-96 rounded-full border-4 border-sportif-yellow p-2 relative overflow-hidden bg-gray-800">
+                    <img src="assets/FotoProfil.png" alt="Dewa Kadek Rangga" class="w-full h-full object-cover rounded-full">
+                </div>
+                <div class="absolute -bottom-4 -left-4 w-24 h-24 bg-sportif-yellow rounded-full opacity-50 blur-xl"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 bg-sportif-gray relative">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl font-display font-bold uppercase mb-4">Tentang <span class="text-sportif-yellow">Saya</span></h2>
+                    <div class="w-20 h-1 bg-sportif-yellow mb-6"></div>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        Halo! Saya <strong>Dewa Kadek Rangga Harta Wijaya</strong>. Saya adalah seorang mahasiswa semester 5 program studi S1 Ilmu Komputer Jurusan Teknik Informatika, Fakultas Teknik dan Kejuruan, Universitas Pendidikan Ganesha. 
+                        Selain fokus pada akademik, saya aktif dalam berbagai organisasi yang mengasah kemampuan <em>leadership</em>, manajemen waktu, dan kerja sama tim.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed">
+                        Saya percaya bahwa disiplin dan kerja keras adalah kunci utama untuk mencapai hasil yang maksimal, baik di dunia coding maupun dalam kehidupan sehari-hari.
+                    </p>
+                </div>
+                <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                    <div class="bg-sportif-dark p-6 rounded border-l-4 border-sportif-yellow">
+                        <i class="fas fa-code text-3xl text-sportif-yellow mb-2"></i>
+                        <h3 class="font-bold text-xl">Web Dev</h3>
+                        <p class="text-sm text-gray-400">React, Tailwind, JS, HTML/CSS</p>
+                    </div>
+                    <div class="bg-sportif-dark p-6 rounded border-l-4 border-sportif-yellow">
+                        <i class="fas fa-users text-3xl text-sportif-yellow mb-2"></i>
+                        <h3 class="font-bold text-xl">Organisasi</h3>
+                        <p class="text-sm text-gray-400">Aktif & Berpengalaman</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PENDIDIKAN SECTION -->
+    <section id="pendidikan" class="py-20 bg-sportif-dark">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-display font-bold uppercase text-center mb-12">Riwayat <span class="text-sportif-yellow">Pendidikan</span></h2>
+            
+            <div class="max-w-3xl mx-auto space-y-6">
+                <!-- Universitas -->
+                <div class="bg-sportif-gray p-6 rounded-lg flex items-start gap-4 hover-card transition duration-300">
+                    <div class="bg-sportif-yellow p-3 rounded-full text-black">
+                        <i class="fas fa-graduation-cap text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">Universitas Pendidikan Ganesha</h3>
+                        <p class="text-sportif-yellow text-sm font-bold mb-2">S1 Ilmu Komputer</p>
+                        <p class="text-gray-400 text-sm">Mendalami ilmu komputer, pemrograman, dan pengembangan sistem informasi.</p>
+                    </div>
+                </div>
+
+                <!-- SMA -->
+                <div class="bg-sportif-gray p-6 rounded-lg flex items-start gap-4 hover-card transition duration-300">
+                    <div class="bg-gray-700 p-3 rounded-full text-white">
+                        <i class="fas fa-school text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">SMA N 2 Singaraja</h3>
+                        <p class="text-gray-400 text-sm font-bold mb-2">Sekolah Menengah Atas</p>
+                        <p class="text-gray-400 text-sm">Menempuh pendidikan dasar menengah dengan fokus pada Matematika dan ilmu pengetahuan alam.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="organisasi" class="py-20 bg-sportif-gray relative">
+        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-sportif-yellow to-transparent"></div>
+        
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-display font-bold uppercase text-center mb-4">Pengalaman <span class="text-sportif-yellow">Organisasi</span></h2>
+            <p class="text-center text-gray-400 mb-12">Kontribusi dan peran saya dalam kegiatan kampus.</p>
+
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <div class="bg-sportif-dark p-6 rounded-lg border border-gray-800 hover:border-sportif-yellow transition group">
+                    <div class="mb-4">
+                        <i class="fas fa-shield-alt text-4xl text-gray-600 group-hover:text-sportif-yellow transition"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Anggota Sie Keamanan</h3>
+                    <p class="text-sportif-yellow text-sm mb-3">Dies Natalis Ke-33</p>
+                    <p class="text-gray-400 text-sm">Bertanggung jawab menjaga ketertiban dan keamanan selama rangkaian acara Dies Natalis berlangsung.</p>
+                </div>
+
+                <div class="bg-sportif-dark p-6 rounded-lg border border-gray-800 hover:border-sportif-yellow transition group">
+                    <div class="mb-4">
+                        <i class="fas fa-clipboard-list text-4xl text-gray-600 group-hover:text-sportif-yellow transition"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Sekretaris Sie Perlengkapan</h3>
+                    <p class="text-sportif-yellow text-sm mb-3">INTEGER#8</p>
+                    <p class="text-gray-400 text-sm">Mengelola administrasi dan pendataan inventaris perlengkapan yang dibutuhkan untuk kelancaran acara.</p>
+                </div>
+
+                <div class="bg-sportif-dark p-6 rounded-lg border border-gray-800 hover:border-sportif-yellow transition group">
+                    <div class="mb-4">
+                        <i class="fas fa-hand-holding-heart text-4xl text-gray-600 group-hover:text-sportif-yellow transition"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Anggota Bidang 3</h3>
+                    <p class="text-sportif-yellow text-sm mb-3">Kesejahteraan Mahasiswa HMJ TI</p>
+                    <p class="text-gray-400 text-sm">Berperan aktif dalam menampung aspirasi dan meningkatkan kesejahteraan mahasiswa jurusan Teknik Informatika.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="project" class="py-20 bg-sportif-dark relative overflow-hidden">
+        <div class="absolute -right-20 top-20 w-96 h-96 bg-sportif-yellow rounded-full blur-3xl opacity-10"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-display font-bold uppercase">Hasil <span class="text-sportif-yellow">Project</span></h2>
+                <p class="text-gray-400 mt-2">Kumpulan Aplikasi dan Fitur Web yang Telah Didevelop</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                
+                <div class="bg-sportif-gray rounded-xl shadow-2xl overflow-hidden border border-gray-700 flex flex-col justify-between hover-card transition duration-300">
+                    <div>
+                        <div class="relative bg-black/60 h-56 overflow-hidden border-b border-gray-700 flex items-center justify-center">
+                            <img src="dashboard.png" alt="Dashboard MaxiSpeedShop" class="w-full h-full object-cover hover:scale-105 transition duration-500" onerror="this.src='https://via.placeholder.com/600x350/111111/FFC107?text=MaxiSpeedShop+NMAX+155'">
+                            <span class="absolute top-3 right-3 bg-sportif-yellow text-slate-900 font-extrabold text-xs px-3 py-1 rounded-full uppercase tracking-wider shadow">
+                                React + Vite
+                            </span>
+                        </div>
+
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-sportif-yellow flex items-center gap-2">
+                                🏍️ MaxiSpeedShop
+                            </h3>
+                            <p class="text-gray-300 text-sm mb-4 leading-relaxed">
+                                Aplikasi Web E-Commerce berbasis Single Page Application (SPA) khusus variasi & modifikasi NMAX 155. Memiliki fitur Katalog Produk, Keranjang Belanja, Form Checkout, serta Admin Panel Dashboard terintegrasi secara <em>real-time</em> via Context API.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-slate-800 text-cyan-400 border border-slate-700 text-xs px-2.5 py-1 rounded-md font-semibold"><i class="fab fa-react mr-1"></i> React JS</span>
+                                <span class="bg-slate-800 text-purple-400 border border-slate-700 text-xs px-2.5 py-1 rounded-md font-semibold"><i class="fas fa-bolt mr-1"></i> Vite</span>
+                                <span class="bg-slate-800 text-teal-400 border border-slate-700 text-xs px-2.5 py-1 rounded-md font-semibold"><i class="fab fa-css3-alt mr-1"></i> Tailwind v4</span>
+                                <span class="bg-slate-800 text-yellow-400 border border-slate-700 text-xs px-2.5 py-1 rounded-md font-semibold"><i class="fas fa-route mr-1"></i> React Router DOM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tombol Aksi -->
+                    <div class="p-6 pt-0 flex gap-3">
+                        <a href="https://dwrangga.github.io/MaxiSpeedShop/" target="_blank" class="flex-1 bg-sportif-yellow text-black font-bold uppercase py-3 rounded text-center text-sm hover:bg-yellow-500 transition flex items-center justify-center gap-2">
+                            <i class="fas fa-external-link-alt"></i> Buka Website
+                        </a>
+                        <a href="https://github.com/Dwrangga/MaxiSpeedShop" target="_blank" class="border border-gray-600 hover:border-sportif-yellow text-white font-bold py-3 px-4 rounded text-center text-sm transition flex items-center justify-center">
+                            <i class="fab fa-github text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PROJECT MINI: KALKULATOR LPG -->
+                <div class="bg-sportif-gray rounded-xl shadow-2xl overflow-hidden border border-gray-700 flex flex-col justify-between">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-4 text-sportif-yellow">Kalkulator Gas LPG 3Kg</h3>
+                        <p class="text-gray-300 mb-6">
+                            Project interaktif berbasis Vanilla JavaScript untuk menghitung total harga pembelian tabung gas LPG 3 Kg secara otomatis dengan patokan harga Rp 18.000 / tabung.
+                        </p>
+
+                        <form id="lpgForm" class="space-y-4">
+                            <div>
+                                <label for="jumlah" class="block text-sm font-bold mb-2">Jumlah Tabung (3Kg)</label>
+                                <div class="relative">
+                                    <input type="number" id="jumlah" min="1" value="1" class="w-full bg-sportif-dark border border-gray-600 rounded px-4 py-3 text-white focus:outline-none focus:border-sportif-yellow transition" placeholder="Contoh: 2">
+                                    <span class="absolute right-4 top-3 text-gray-500 text-sm">Tabung</span>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-sportif-dark p-4 rounded border border-gray-700">
+                                <p class="text-xs text-gray-400 uppercase tracking-wider mb-1">Harga Satuan</p>
+                                <p class="text-xl font-bold text-white">Rp 18.000</p>
+                            </div>
+
+                            <button type="button" onclick="hitungTotal()" class="w-full bg-sportif-yellow text-black font-bold uppercase py-3 rounded hover:bg-yellow-500 transition transform active:scale-95">
+                                Hitung Total
+                            </button>
+                        </form>
+
+                        <!-- Hasil -->
+                        <div id="hasilContainer" class="mt-6 p-4 bg-green-900/30 border border-green-700 rounded hidden">
+                            <p class="text-sm text-green-400 mb-1">Total Pembayaran:</p>
+                            <p id="totalHarga" class="text-3xl font-display font-bold text-white">Rp 0</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-10 border-t border-gray-800">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-2xl font-display font-bold text-sportif-yellow mb-4">DEWA KADEK RANGGA</h2>
+            <p class="text-gray-500 text-sm mb-6">Terus belajar, terus berkembang.</p>
+            
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="text-gray-400 hover:text-sportif-yellow transition text-xl"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-400 hover:text-sportif-yellow transition text-xl"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Dwrangga" target="_blank" class="text-gray-400 hover:text-sportif-yellow transition text-xl"><i class="fab fa-github"></i></a>
+            </div>
+            
+            <p class="text-gray-600 text-xs">&copy; 2026 Dewa Kadek Rangga Harta Wijaya. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script>
+
+        function hitungTotal() {
+            const hargaPerTabung = 18000;
+            const inputJumlah = document.getElementById('jumlah').value;
+            const jumlah = parseFloat(inputJumlah);
+            const hasilContainer = document.getElementById('hasilContainer');
+            const totalHargaElement = document.getElementById('totalHarga');
+
+            if (isNaN(jumlah) || jumlah <= 0) {
+                alert("Mohon masukkan jumlah tabung yang valid (minimal 1).");
+                return;
+            }
+
+            const total = jumlah * hargaPerTabung;
+
+            const formatRupiah = new Intl.NumberFormat('id-ID', {
+                style: 'currency',
+                currency: 'IDR',
+                minimumFractionDigits: 0
+            }).format(total);
+
+            totalHargaElement.innerText = formatRupiah;
+            hasilContainer.classList.remove('hidden');
+            
+            hasilContainer.style.opacity = 0;
+            setTimeout(() => {
+                hasilContainer.style.transition = 'opacity 0.5s';
+                hasilContainer.style.opacity = 1;
+            }, 10);
+        }
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
